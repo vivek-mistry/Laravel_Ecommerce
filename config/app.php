@@ -201,7 +201,8 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         HtmlServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-        Barryvdh\Snappy\ServiceProvider::class
+        Barryvdh\Snappy\ServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
     ],
 
     /*

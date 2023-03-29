@@ -5,6 +5,8 @@ use App\Http\Controllers\Backend\CouponController as BackendCouponController;
 use App\Http\Controllers\Backend\OrderController as BackendOrderController;
 use App\Http\Controllers\Backend\UserController as BackendUserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ProductController as BackendProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\DashboardController;
@@ -158,4 +160,15 @@ Route::prefix('backend')->group(function () {
         Route::put('update/{coupon_id}', [BackendCouponController::class, 'update']);
         Route::get('remove/{coupon_id}', [BackendCouponController::class, 'remove']);
     });
+
+    Route::middleware([FimaAdminAuth::class])->prefix('category')->group(function () {
+        Route::get('list', [CategoryController::class, 'index']);
+    });
+    Route::middleware([FimaAdminAuth::class])->prefix('product')->group(function () {
+        Route::get('list', [BackendProductController::class, 'index']);
+    });
 });
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

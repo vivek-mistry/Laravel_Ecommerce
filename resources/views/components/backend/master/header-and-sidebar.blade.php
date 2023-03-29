@@ -66,6 +66,8 @@
                 <x-backend-navigation menu-title="Users" fa-class="fa-users" routes="{{ url('backend/user/list') }}" active-route='user' />
                 <x-backend-navigation menu-title="Orders" fa-class="fa-shopping-cart" routes="{{ url('backend/order/list') }}" active-route='order' />
                 <x-backend-navigation menu-title="Coupons" fa-class="fa-percent" routes="{{ url('backend/coupon/list') }}" active-route='coupon' />
+                <x-backend-navigation menu-title="Category" fa-class="fa-circle" routes="{{ url('backend/category/list') }}" active-route='category' />
+                <x-backend-navigation menu-title="Product" fa-class="fa-asterisk" routes="{{ url('backend/product/list') }}" active-route='product' />
             </ul>
         </nav>
 
