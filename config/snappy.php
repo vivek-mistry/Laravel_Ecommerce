@@ -35,18 +35,20 @@ return [
     
     'pdf' => [
         'enabled' => true,
-        'binary'  => env('WKHTML_PDF_BINARY', '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"'), // WINDOWS
+        // 'binary'  => env('WKHTML_PDF_BINARY', '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"'), // WINDOWS
         'timeout' => false,
         'options' => [],
         'env'     => [],
+        'binary'  => env('WKHTML_PDF_BINARY', '"/usr/local/bin/wkhtmltopdf"')
     ],
     
     'image' => [
         'enabled' => true,
-        'binary'  => env('WKHTML_IMG_BINARY', '"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"'), // WINDOWS
+        // 'binary'  => env('WKHTML_IMG_BINARY', '"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"'), // WINDOWS
         'timeout' => false,
         'options' => [],
         'env'     => [],
+        'binary'  => env('WKHTML_IMG_BINARY', '"/usr/local/bin/wkhtmltoimage"'),
     ],
 
 ];
